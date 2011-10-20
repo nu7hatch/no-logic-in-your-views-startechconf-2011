@@ -22,7 +22,9 @@
 * View - produces response for user
 
 !SLIDE
-# MVC for web (Ruby on Rails)
+# MVC for web
+
+## Ruby on Rails
 
 * Model - business logic
 * Controller - handles web request, produces proper response

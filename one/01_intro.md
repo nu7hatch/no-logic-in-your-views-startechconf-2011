@@ -1,7 +1,7 @@
 !SLIDE 
 # No logic in your views!
 
-!SLIDE bullets incremental
+!SLIDE
 
 * Why?
 * How?

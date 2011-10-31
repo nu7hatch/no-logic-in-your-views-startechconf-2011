@@ -45,7 +45,7 @@
 !SLIDE
 # Treat controllers as views
 
-!SLIDE
+!SLIDE small
 # Before
 
     @@@ruby
@@ -56,7 +56,7 @@
 	  end
 	end
 	
-!SLIDE
+!SLIDE small
 # After
 
     @@@ruby
@@ -75,15 +75,19 @@
 !SLIDE
 # Helpers to slim down templates
 
-!SLIDE
+!SLIDE small
 # Before
 
     @@@html
     <% @books.each do |book| %>
-	  <h1><%= link_to book.title, book, :id => "show_book_#{book.id}" %></h1>
+	  <h1>
+	    <%= link_to book.title, book, 
+		            :id => "show_book_#{book.id}" %>
+	  </h1>
 	  <p><%= book.summary %></p>
 	<% end %>
-	
+
+!SLIDE small
 # After
 
     @@@html
@@ -92,10 +96,13 @@
 	  <p><%= book.summary %></p>
 	<% end %>
 
+and...
+
 	@@@ruby
 	module BooksHelper
 	  def link_to_book(book, options={})
-	    link_to book.title, book, { :id => "show_book_#{book.id} }.merge(options)
+	    defaults = { :id => "show_book_#{book.id} }
+	    link_to book.title, book, defaults.merge(options)
 	  end
 	end
 

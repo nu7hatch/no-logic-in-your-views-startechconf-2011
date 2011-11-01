@@ -1,18 +1,24 @@
 !SLIDE
 # Thank you!
 
-* <code>@nu7hatch</code>
-* <code>www.nu7hat.ch</code>
+<footer>
+  <h2><code>@nu7hatch</code></h2>
+  <h2><code>www.nu7hat.ch</code></h2>
+</footer>
 
 !SLIDE
 # Thanks to Cubox!
 
-<code>http://www.cubox.com.uy</code>
+<footer>
+  <h2><code>http://www.cubox.com.uy</code></h2>
+</footer>
 
 !SLIDE
 # Thanks for showoff!
 
-<code>http://www.github.com/schacon/showoff</code>
+<footer>
+  <h2><code>http://www.github.com/schacon/showoff</code></h2>
+</footer>
 
 !SLIDE
 # Questions?

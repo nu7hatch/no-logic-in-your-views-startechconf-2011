@@ -1,0 +1,118 @@
+h1, h2 {
+   font-weight: bold;
+   color: rgb(10,32,65);
+   text-shadow: rgba(0,0,0,0.2) 3px 3px 2px;
+   margin: 0;
+   padding: 0.5em 0;
+}
+
+h2 {
+   color: rgb(70,92,100);
+   text-shadow: none;
+}
+
+footer {
+   display: block;
+   position: absolute;
+   bottom: 0;
+   padding-bottom: 80px;
+   width: 100%;
+}
+
+.main h1 {
+   color: #990000;
+}
+
+.bullets ul li {
+   color: rgb(70,92,100);
+   line-height: 120%;
+   text-align: left;
+   list-style: disc;
+   padding-left: 0.3em;
+}
+.bullets ul {
+   font-family: Monospace, 'Courier New';
+   font-weight: bold;
+   font-size: 40px;
+   padding: 0 1em;
+   margin-left: 1.2em;
+}
+.bullets ul li.blur {
+   color: #AAA;
+}
+.bullets ul ul {
+   margin-top: 15px !important;
+   margin-bottom: -10px !important;
+   list-style-type: none !important;
+   padding: 0 !important;
+   font-style: italic;
+   font-weight: normal;
+}
+.bullets ul ul li {
+   margin-bottom: 0 !important;
+   paddinb-bottom: 0 !important;
+   list-style-type: none !important;
+}
+
+.with-title {
+   width: 1024px;
+   height: 768px;
+}
+.with-title h1 {
+   line-height: 170px;
+   top: 0;
+   position: absolute;
+   width: 100%;
+   text-align: center;
+   font-size: 70px;
+}
+.with-title h2 {
+   top: 120;
+   position: absolute;
+   width: 100%;
+   text-align: center;
+}
+.with-title pre {
+   padding-top: 220px;
+   font-size: 26px;
+   line-height: 36px;
+}
+.bullets.with-title ul {
+   padding-top: 220px;
+}
+.bullets.with-title h1 {
+}
+
+.resources {
+   position: absolute;
+   bottom: 60px;
+   width: 100%;
+   text-align: center;
+}
+
+pre {
+   font-size: 28px;
+   padding-left: 50px;
+}
+code {
+   font-family: monospace;
+}
+
+.meme img {
+   position: absolute;
+   top: 0;
+}
+
+.wrong {
+   background: #EE4444;
+}
+.wrong *, .good * {
+   color: #222 !important;
+}
+.good {
+   background: #55CC55;
+}
+
+.green h1 {
+   color: green;
+}

@@ -1,17 +1,20 @@
-!SLIDE
+!SLIDE bullets incremental with-title
 .notes What is MVP and how it works? Actually it's very similar to MVC, take a look:
 .notes The most important difference is that you can't access models from the view layer.
 # How it works?
 
-* Model - nothing changes, business logic
-* Presenter - tie between model and view
-* View - only presentation layer, no access to model
+* Model 
+    - nothing changes, business logic
+* Presenter 
+    - tie between model and view
+* View 
+    - only presentation layer, no access to model
 
 !SLIDE
 .notes Ok my friends, for sure you want to see it in action, so I  prepared some snippets which possible implementation.
 # Example...
 
-!SLIDE small
+!SLIDE small with-title
 .notes What I have here is very, very simple user model, just name and age. 
 # Model
 
@@ -21,7 +24,7 @@
 	        self.name = name
 		    self.age = age
 
-!SLIDE small
+!SLIDE small with-title
 .notes Also very simple presentrer.
 # Presenter
 
@@ -32,7 +35,7 @@
 			self.user_name = self.__user.name
 			self.user_age = self.__user.age
 			
-!SLIDE small
+!SLIDE small with-title
 .notes And finally, one possible view. 
 # View	
 
@@ -46,7 +49,7 @@
 			    self.p.user_name,
 				self.p.user_age)
 
-!SLIDE small
+!SLIDE small with-title
 .notes Now we can use this views in our application. 
 # Usage?...
 
@@ -58,7 +61,7 @@
 		    view = UserInfoView(name, age)
 			self.write(view.render())
 
-!SLIDE
+!SLIDE with-title bullets incremental
 .notes As you noticed, I totaly separated my application from the web requests layer. Thanks to this my implementation is very clean, and easy to test without slow and complicated integration tests.
 .notes Also, by using separated request handler I made it totally independent from the web. I can use the same code in console application with no fuss.  
 # MVP strenthgs
@@ -67,10 +70,7 @@
 * Testable
 * Independent
 
-!SLIDE
-# Controller !== Event handler
-
-!SLIDE
+!SLIDE with-title bullets incremental
 .notes And this insight, pushes us to more deductions. 
 # What does web really need?
 
@@ -80,13 +80,22 @@
 * Presenter or Controller
 * Templating
 
-!SLIDE
+!SLIDE with-title bullets good
+# What does web really need?
+
+* Model
+* View
+* Event (Request) handler
+* Presenter or Controller
+* Templating
+
+!SLIDE main green
 # MVHPT
 
-!SLIDE
+!SLIDE main green
 # MVCHT
 
-!SLIDE
+!SLIDE main green
 # MVCPHT
 
 !SLIDE

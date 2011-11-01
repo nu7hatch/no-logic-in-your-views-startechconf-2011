@@ -30,14 +30,25 @@
 
 ## Just pick up your favorite!
 
+!SLIDE small main
+# Btw, Django templates rock!
+
 !SLIDE
 # But remember...
 
 !SLIDE small main
-.notes And now my friends, you may say, WTF? Some guy with crappy hairstyle is showing up here, saying that everything we've done so far is wrong and we should rewrite our Rails or Django apps with some MVCHPT pattern? 
 # NO LOGIC IN YOUR VIEWS!
 
 !SLIDE with-title bullets incremental
+.notes Yes, i'm very big hater of HAML and reason of it is very ordinary. Simply, my applications are styled by external design studios or freelancers, and most of them have no idea about existing of those abstract markups.  
+# Avoid abstraction
+
+* HAML
+* Slim
+* ...
+
+!SLIDE with-title bullets incremental
+.notes And now my friends, you may say, WTF? Some guy with crappy hairstyle is showing up here, saying that everything we've done so far is wrong and we should rewrite our Rails or Django apps with some MVCHPT pattern? 
 .notes Of course not. I obviously hope that some new, nicely implemented MVP or MVC framework will become Rails-killer. But so far we have to deal with this. And we can do it by applying sort of good practices. 
 # Logicless views in Rails?
 
@@ -55,7 +66,7 @@
     @@@ruby
 	class BooksController < ApplicationController
 	  def index
-	    @books = Post.where(:available => true).all
+	    @books = Books.where(:read => false).all
 		respond_with(@books)
 	  end
 	end
@@ -65,14 +76,15 @@
 
     @@@ruby
 	class Book < ActiveRecord::Base
-	  def self.available
-	    where(:available => true)
+	  def self.unread
+	    where(:read => false)
 	  end
 	end
 	
 	class BooksController < ApplicationController
 	  def index
-	    @books = Post.available.all
+	    @books = Book.unread.all
+		respond_with(@books)
 	  end
 	end
 
@@ -111,13 +123,5 @@
 	  <p><%= book.summary %></p>
 	<% end %>
 
-!SLIDE with-title bullets incremental
-.notes Yes, i'm very big hater of HAML and reason of it is very ordinary. Simply, my applications are styled by external design studios or freelancers, and most of them have no idea about existing of those abstract markups.  
-# Avoid abstraction
-
-* HAML
-* Slim
-* ...
-
 !SLIDE small main
-# Btw, Django templates rock!
+# NO LOGIC IN YOUR VIEWS!

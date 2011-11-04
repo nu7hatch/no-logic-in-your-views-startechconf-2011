@@ -44,7 +44,6 @@ h1, h2 {
    font-family: "Droid Sans";
    letter-spacing: -3px;
 }
-
 h2 {
    color: rgb(70,92,100);
    text-shadow: none;
@@ -56,6 +55,9 @@ footer {
    bottom: 0;
    padding-bottom: 80px;
    width: 100%;
+}
+footer small {
+   font-size: 80%;
 }
 
 .main h1 {
@@ -147,10 +149,13 @@ code {
 }
 
 .wrong {
-   background: #DD1111;
+   background: -webkit-gradient(linear, left top, right bottom, from(#EE4444), to(#AA0000))
 }
 .wrong *, .good * {
    color: #FFF !important;
+}
+.wrong footer * {
+   color: #FFAA88 !important;
 }
 .good {
    background: #11AA11;
@@ -162,4 +167,16 @@ code {
 
 .woot {
    color: transparent;
+}
+
+.full {
+   height: 100%;
+   vertical-align: middle;
+}
+.full h1 {
+   margin: 0 !important;
+   padding: 0 !important;
+   top: 50% !important;
+   position: absolute;
+   width: 100%;
 }

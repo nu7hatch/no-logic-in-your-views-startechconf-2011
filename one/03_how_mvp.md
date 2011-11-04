@@ -89,17 +89,17 @@
 * Presenter or Controller
 * Templating
 
-!SLIDE main green
+!SLIDE main good full
 # MVHPT?
 
-!SLIDE main green
+!SLIDE main good full
 # MVCHT?
 
-!SLIDE main green
+!SLIDE main good full
 # MVCPHT?
 
 !SLIDE
 # AAAAAAA
 
-!SLIDE
+!SLIDE small
 # American Association Against Acronym and Abbreviation Abuse

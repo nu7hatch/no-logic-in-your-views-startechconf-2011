@@ -25,7 +25,7 @@
 .notes Exactly, you are using MVC/MVT frameworks.
 # MVC frameworks
 
-!SLIDE main small
+!SLIDE main full wrong small
 .notes Now let me tell you something my friends. MVC for the web is a marketing bullshit. So far I know, there is no agile web framework matching the definition of MVC.
 # MVC for the web is a myth!
 
@@ -75,10 +75,10 @@
 * Templates == Views
 * Controllers == View + Event Handler
 
-!SLIDE main
+!SLIDE main small full wrong
 # View !== Template
 
-!SLIDE main small
+!SLIDE main small full wrong
 # Controller !== Event handler
 
 !SLIDE

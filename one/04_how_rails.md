@@ -10,6 +10,7 @@
 # Before
 
     @@@ruby
+	# app/controllers/posts_controller.rb
 	class BooksController < ApplicationController
 	  def index
 	    @books = Books.where(:read => false).all
@@ -21,12 +22,18 @@
 # After
 
     @@@ruby
+	# app/models/book.rb
 	class Book < ActiveRecord::Base
 	  def self.unread
 	    where(:read => false)
 	  end
 	end
-	
+
+!SLIDE small with-title
+# After
+
+    @@@ruby	
+	# app/controllers/posts_controller.rb
 	class BooksController < ApplicationController
 	  def index
 	    @books = Book.unread.all
@@ -41,11 +48,10 @@
 # Before
 
     @@@html
+	<!-- app/views/books/index.html.erb -->
     <% @books.each do |book| %>
-	  <h1>
-	    <%= link_to book.title, book, 
-		            :id => "show_book_#{book.id}" %>
-	  </h1>
+	  <h1><%= link_to book.title, book, 
+		              :id => "show_book_#{book.id}" %></h1>
 	  <p><%= book.summary %></p>
 	<% end %>
 
@@ -53,6 +59,7 @@
 # After
 
 	@@@ruby
+	# app/helpers/books_helper.rb
 	module BooksHelper
 	  def link_to_book(book, options={})
 	    defaults = { :id => "show_book_#{book.id}" }
@@ -64,6 +71,7 @@
 # After
 
     @@@html
+	<!-- app/views/books/index.html.erb -->
 	<% @books.each do |book| %>
 	  <h1><%= link_to_book(book) %></h1>
 	  <p><%= book.summary %></p>
@@ -80,6 +88,7 @@
 # Before
 
     @@@ruby
+	# app/controllers/posts_controller.rb
 	class PostsController < ApplicationController
 	  def show
 	    @post = Post.find(params[:post])
@@ -92,8 +101,26 @@
 # Before
 
     @@@html
+	<!-- posts/show.html.erb -->
 	<h1><%= @post.title %></h1>
 	<p><%= @post.content %></p>
+	<ul class="comments">
+	  <% @comments.each do |comment| %>
+	    <%= content_tag_for :li, comment do %><article>
+		  <p><%= comment.content %></p>
+		  <footer>
+		    posted at 
+			<time><%= comment.created_at.to_s(:short) %></time>
+		  </footer>
+		</article><% end %>
+	  <% end %>
+	</ul>
+
+!SLIDE smaller with-title
+# Before
+
+    @@@html	
+	<!-- shared/comments.html.erb -->
 	<ul class="comments">
 	  <% @comments.each do |comment| %>
 	    <%= content_tag_for :li, comment do %><article>
@@ -114,23 +141,6 @@
 	<h1><%= @post.title %></h1>
 	<p><%= @post.content %></p>
 	<%= render :partial => "shared/comments" %>
-
-!SLIDE smaller with-title
-# Before
-
-    @@@html	
-	<!-- shared/comments.html.erb -->
-	<ul class="comments">
-	  <% @comments.each do |comment| %>
-	    <%= content_tag_for :li, comment do %><article>
-		  <p><%= comment.content %></p>
-		  <footer>
-		    posted at 
-			<time><%= comment.created_at.to_s(:short) %></time>
-		  </footer>
-		</article><% end %>
-	  <% end %>
-	</ul>
 
 !SLIDE small with-title
 # After
@@ -281,8 +291,17 @@
 * Avoid magic
 * Use logicless templates
 
+!SLIDE with-title bullets good
+# Once again
+
+* Treat controllers as views
+* Use helpers to slim down templates
+* Use cells
+* Avoid magic
+* Use logicless templates
+
 !SLIDE
 # And remember...
 
-!SLIDE small main
+!SLIDE small main full wrong
 # NO LOGIC IN YOUR VIEWS!

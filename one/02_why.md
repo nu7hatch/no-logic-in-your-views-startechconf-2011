@@ -1,13 +1,13 @@
 !SLIDE bullets incremental with-title
 .notes Answer for the first question is very short and simple. Our application becomes very hard to test, and business logic becomes view-dependent, which is fucking wrong! 
-# Why it is so bad?
+# Why is it so bad?
 
 * hard to test
 * logic becomes view-dependent
 
 !SLIDE bullets incremental with-title
 .notes But there is one more important question we have to ask before we move forward. Why on the earth people are putting logic in the views? And again, simple answer. 
-# Why people do it?
+# Why do people do it?
 
 * because they can...
 * because tools allow that
@@ -17,8 +17,8 @@
 # Speaking of tools
 
 * Ruby on Rails
-* Padrino
 * Django
+* Padrino
 * Pylons/Pyramid
 
 !SLIDE bullets incremental with-title

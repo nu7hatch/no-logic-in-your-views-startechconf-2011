@@ -24,6 +24,7 @@
 !SLIDE
 .notes As i said, 2 months ago i expected to present Shaven as the best solution. But as you see in that presentation, problem is not laying down in the templates but in the way of how our application is built.
 # The winner is...
+<h2>&nbsp;</h2>
 
 !SLIDE
 # The winner is...
@@ -41,7 +42,7 @@
 
 !SLIDE with-title bullets incremental
 .notes Yes, i'm very big hater of HAML and reason of it is very ordinary. Simply, my applications are styled by external design studios or freelancers, and most of them have no idea about existing of those abstract markups.  
-# Avoid abstraction
+# Avoid HTML magic
 
 * HAML
 * Slim
@@ -55,7 +56,7 @@
 * Treat controllers as views
 * Use helpers to slim down templates
 * Pseudo-presenter layer
-* Avoid abstraction
+* Avoid magic
 
 !SLIDE small
 # Treat controllers as views
@@ -109,7 +110,7 @@
 	@@@ruby
 	module BooksHelper
 	  def link_to_book(book, options={})
-	    defaults = { :id => "show_book_#{book.id} }
+	    defaults = { :id => "show_book_#{book.id}" }
 	    link_to book.title, book, defaults.merge(options)
 	  end
 	end

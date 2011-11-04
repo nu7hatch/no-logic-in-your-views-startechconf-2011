@@ -10,7 +10,7 @@
 # Thanks to Cubox!
 
 <footer>
-  <h2><code>http://www.cubox.com.uy</code></h2>
+  <h2><code>http://www.cuboxsa.com</code></h2>
 </footer>
 
 !SLIDE

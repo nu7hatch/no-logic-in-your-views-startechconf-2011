@@ -1,7 +1,7 @@
 !SLIDE bullets incremental with-title
 .notes What is MVP and how it works? Actually it's very similar to MVC, take a look:
 .notes The most important difference is that you can't access models from the view layer.
-# How it works?
+# How does it work?
 
 * Model 
     - nothing changes, business logic
@@ -11,7 +11,7 @@
     - only presentation layer, no access to model
 
 !SLIDE
-.notes Ok my friends, for sure you want to see it in action, so I  prepared some snippets which possible implementation.
+.notes Ok my friends, for sure you want to see it in action, so I prepared some snippets whith possible implementation.
 # Example...
 
 !SLIDE small with-title
@@ -37,7 +37,7 @@
 			
 !SLIDE small with-title
 .notes And finally, one possible view. 
-# View	
+# View
 
     @@@python
 	class UserInfoView(object):
@@ -58,13 +58,13 @@
 	
 	class UserInfoHandler(tornado.web.RequestHandler):
 	    def get(self, name, age):
-		    view = UserInfoView(name, age)
+		    view = UserInfoView(name=name, age=age)
 			self.write(view.render())
 
 !SLIDE with-title bullets incremental
 .notes As you noticed, I totaly separated my application from the web requests layer. Thanks to this my implementation is very clean, and easy to test without slow and complicated integration tests.
 .notes Also, by using separated request handler I made it totally independent from the web. I can use the same code in console application with no fuss.  
-# MVP strenthgs
+# MVP strengths
 
 * Clean
 * Testable
@@ -72,7 +72,7 @@
 
 !SLIDE with-title bullets incremental
 .notes And this insight, pushes us to more deductions. 
-# What does web really need?
+# What does the web need?
 
 * Model
 * View
@@ -81,7 +81,7 @@
 * Templating
 
 !SLIDE with-title bullets good
-# What does web really need?
+# What does the web need?
 
 * Model
 * View

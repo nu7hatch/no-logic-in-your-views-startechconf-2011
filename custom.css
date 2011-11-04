@@ -49,6 +49,7 @@ footer {
    font-weight: normal;
 }
 .bullets ul ul li {
+   font-size: 70%;
    margin-bottom: 0 !important;
    paddinb-bottom: 0 !important;
    list-style-type: none !important;
@@ -97,22 +98,28 @@ pre {
 code {
    font-family: monospace;
 }
-
+.smaller pre {
+   font-size: 24px !important;
+}
 .meme img {
    position: absolute;
    top: 0;
 }
 
 .wrong {
-   background: #EE4444;
+   background: #DD1111;
 }
 .wrong *, .good * {
-   color: #222 !important;
+   color: #FFF !important;
 }
 .good {
-   background: #55CC55;
+   background: #11AA11;
 }
 
 .green h1 {
    color: green;
+}
+
+.woot {
+   color: #fff;
 }

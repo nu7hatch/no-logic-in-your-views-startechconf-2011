@@ -23,14 +23,11 @@
 
 !SLIDE bullets incremental with-title
 .notes Exactly, you are using MVC/MVT frameworks.
-# Speaking of tools...
+# MVC frameworks
 
-* MVC frameworks (Rails, Pyramid)
-* MVT frameworks (Django)
-
-!SLIDE main
+!SLIDE main small
 .notes Now let me tell you something my friends. MVC for the web is a marketing bullshit. So far I know, there is no agile web framework matching the definition of MVC.
-# MVC for web is a myth!
+# MVC for the web is a myth!
 
 !SLIDE bullets incremental with-title
 .notes Just take a look at this short comparison...
@@ -55,9 +52,11 @@
     - business logic
 * Controller 
     - handles web request, produces response...
+	- <span class="woot">foo</span>
 * View 
     - um... isn't it a template?
-
+	- <span class="woot">foo</span>
+	
 !SLIDE bullets with-title wrong
 # Web vs. MVC
 

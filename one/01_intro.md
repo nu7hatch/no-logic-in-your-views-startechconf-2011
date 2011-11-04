@@ -23,9 +23,9 @@
 !SLIDE center
 # Uruguay
 
-!SLIDE center
+!SLIDE center small
 .notes On a daily basis I work as Ruby mercenary for Cubox. Besides, i'm typical backend developer with big love for Python and Google's Go.
-# Ruby Ninja at Cubox
+# Ruby mercenary at Cubox
 
 <footer>
   <h2><code>http://www.cubox.com.uy/</code></h2>

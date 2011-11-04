@@ -73,7 +73,7 @@
 # Use cells
 
 <footer>
-  <h2><code>http://www.github.com/apotonick/cells</code></h2>
+  <h2>http://www.github.com/apotonick/cells</h2>
 </footer>
 
 !SLIDE small with-title

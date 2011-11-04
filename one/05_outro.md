@@ -2,22 +2,22 @@
 # Thank you!
 
 <footer>
-  <h2><code>@nu7hatch</code></h2>
-  <h2><code>www.nu7hat.ch</code></h2>
+  <h2>@nu7hatch</h2>
+  <h2>www.nu7hat.ch</h2>
 </footer>
 
 !SLIDE
 # Thanks to Cubox!
 
 <footer>
-  <h2><code>http://www.cuboxsa.com</code></h2>
+  <h2>http://www.cuboxsa.com</h2>
 </footer>
 
 !SLIDE
 # Thanks for showoff!
 
 <footer>
-  <h2><code>http://www.github.com/schacon/showoff</code></h2>
+  <h2>http://www.github.com/schacon/showoff</h2>
 </footer>
 
 !SLIDE

@@ -1,9 +1,48 @@
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('/fonts/DroidSans-webfont.eot');
+    src: url('/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/DroidSans-webfont.woff') format('woff'),
+         url('/fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('/fonts/DroidSans-Bold-webfont.eot');
+    src: url('/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSansMonoRegular';
+    src: url('DroidSansMono-webfont.eot');
+    src: url('DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DroidSansMono-webfont.woff') format('woff'),
+         url('DroidSansMono-webfont.ttf') format('truetype'),
+         url('DroidSansMono-webfont.svg#DroidSansMonoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.slide {
+   background: -webkit-gradient(linear, left top, right bottom, from(#FFF), to(rgb(170,190,200)))
+}
+
 h1, h2 {
    font-weight: bold;
    color: rgb(10,32,65);
-   text-shadow: rgba(0,0,0,0.2) 3px 3px 2px;
+   text-shadow: rgba(0,0,0,0.3) 3px 3px 2px;
    margin: 0;
    padding: 0.5em 0;
+   font-family: "Droid Sans";
+   letter-spacing: -3px;
 }
 
 h2 {
@@ -31,7 +70,7 @@ footer {
    padding-left: 0.3em;
 }
 .bullets ul {
-   font-family: Monospace, 'Courier New';
+   font-family: 'Droid Sans';
    font-weight: bold;
    font-size: 40px;
    padding: 0 1em;
@@ -45,7 +84,6 @@ footer {
    margin-bottom: -10px !important;
    list-style-type: none !important;
    padding: 0 !important;
-   font-style: italic;
    font-weight: normal;
 }
 .bullets ul ul li {
@@ -94,9 +132,11 @@ footer {
 pre {
    font-size: 28px;
    padding-left: 50px;
+   background: transparent !important;
+   font-family: 'Droid Sans Mono', monospace;
 }
 code {
-   font-family: monospace;
+   font-family: 'Droid Sans Mono', monospace;
 }
 .smaller pre {
    font-size: 24px !important;
@@ -121,5 +161,5 @@ code {
 }
 
 .woot {
-   color: #fff;
+   color: transparent;
 }

@@ -2,15 +2,17 @@
 .notes Hello everyone, I hope you enjoy your time during StarTechConf 2011, and I wish you will enjoy this talk as well. 
 # Ekheeemm!
 
-## Let's begin...
+<footer>
+  <h2>Let's begin...</h2>
+</footer>
 
 !SLIDE center
 .notes My name is Krzysztof Kowalik. Here you have my handle for twitter, github, etc, also you can find more information about me on my homepage. 
 # Krzysztof Kowalik
 
 <footer>
-  <h2><code><big>@nu7hatch</big></code></h2>
-  <h2><code>http://www.nu7hat.ch/</code></h2>
+  <h2>@nu7hatch</h2>
+  <h2>http://www.nu7hat.ch/</h2>
 </footer>
 
 !SLIDE center small
@@ -28,7 +30,7 @@
 # Ruby mercenary at Cubox
 
 <footer>
-  <h2><code>http://www.cubox.com.uy/</code></h2>
+  <h2>http://www.cuboxsa.com/</h2>
 </footer>
 
 !SLIDE main
@@ -37,7 +39,7 @@
 # No logic in your views!
 
 <footer>
-  <h2><code>StarTechConf 2011</code></h2>
+  <h2>StarTechConf 2011</h2>
 </footer>
 
 !SLIDE main bullets incremental with-title

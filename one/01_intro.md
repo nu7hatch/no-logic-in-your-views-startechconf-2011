@@ -1,4 +1,4 @@
-!SLIDE center
+!SLIDE center full
 .notes Hello everyone, I hope you enjoy your time during StarTechConf 2011, and I wish you will enjoy this talk as well. 
 # Ekheeemm!
 
@@ -6,26 +6,34 @@
   <h2>Let's begin...</h2>
 </footer>
 
-!SLIDE center
+!SLIDE center full
 .notes My name is Krzysztof Kowalik. Here you have my handle for twitter, github, etc, also you can find more information about me on my homepage. 
 # Krzysztof Kowalik
 
 <footer>
-  <h2>@nu7hatch</h2>
-  <h2>http://www.nu7hat.ch/</h2>
+  <h2><small>@nu7hatch</small></h2>
+  <h2><small>http://www.nu7hat.ch/</small></h2>
 </footer>
 
-!SLIDE center small
+!SLIDE center small full
 <h1>Yes... You can call me Chris :)</h1>
 
-!SLIDE center
+!SLIDE center full
 .notes I come from Poland, but few months ago I moved to Uruguay, to Montevideo.
 # Poland
 
 !SLIDE center
+<span style="border: 11px solid #FFF; display: inline-block">
+<img src="images/polishtroll.jpg" style="border: 2px solid #333;" />
+</span>
+
+!SLIDE center full
 # Uruguay
 
-!SLIDE center small
+!SLIDE center
+<img src="images/uruguaytroll.jpg" />
+
+!SLIDE center small full
 .notes On a daily basis I work as Ruby mercenary for Cubox. Besides, i'm typical backend developer with big love for Python and Google's Go.
 # Ruby mercenary at Cubox
 

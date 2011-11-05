@@ -1,9 +1,9 @@
-!SLIDE 
+!SLIDE full
 .notes And now my friends, you may say, WTF? Some guy with crappy hairstyle is showing up here, saying that everything we've done so far is wrong and we should rewrite our Rails or Django apps with some MVCHPT pattern? 
 .notes Of course not. I obviously hope that some new, nicely implemented MVP or MVC framework will become Rails-killer. But so far we have to deal with this. And we can do it by applying sort of good practices. 
 # Cleaning up Rails' mess
 
-!SLIDE small
+!SLIDE small full
 # Treat controllers as views
 
 !SLIDE small with-title
@@ -12,6 +12,8 @@
     @@@ruby
 	# app/controllers/posts_controller.rb
 	class BooksController < ApplicationController
+	  respond_to :html
+	  
 	  def index
 	    @books = Books.where(:read => false).all
 		respond_with(@books)
@@ -35,13 +37,15 @@
     @@@ruby	
 	# app/controllers/posts_controller.rb
 	class BooksController < ApplicationController
+	  respond_to :html
+	  
 	  def index
 	    @books = Book.unread.all
 		respond_with(@books)
 	  end
 	end
 
-!SLIDE smaller
+!SLIDE smaller full
 # Use helpers to slim down templates
 
 !SLIDE small with-title
@@ -62,7 +66,7 @@
 	# app/helpers/books_helper.rb
 	module BooksHelper
 	  def link_to_book(book, options={})
-	    defaults = { :id => "show_book_#{book.id}" }
+	    defaults = { :id => dom_id(book, :show) }
 	    link_to book.title, book, defaults.merge(options)
 	  end
 	end
@@ -77,11 +81,11 @@
 	  <p><%= book.summary %></p>
 	<% end %>
 
-!SLIDE
+!SLIDE full
 # Use cells
 
 <footer>
-  <h2>http://www.github.com/apotonick/cells</h2>
+  <h2><small>http://www.github.com/apotonick/cells</small></h2>
 </footer>
 
 !SLIDE small with-title
@@ -90,6 +94,8 @@
     @@@ruby
 	# app/controllers/posts_controller.rb
 	class PostsController < ApplicationController
+	  respond_to :html
+	  
 	  def show
 	    @post = Post.find(params[:post])
 		@comments = @post.comments
@@ -147,7 +153,7 @@
 
     @@@ruby
 	# app/cells/comments/listing.rb
-	class Comments::ListingCell < Rails::Cell
+	class Comments::ListingCell < Cell::Rails
 	  def show
 		@commentable = options[:commentable]
 		@comments = @commentable.comments
@@ -191,7 +197,7 @@
 * Slim
 * ...
 
-!SLIDE
+!SLIDE full
 .notes Ok my friends, but finally we have to talk about the backbone of our views. About the templates.
 .notes When i submitted proposal for this conference few months ago i was just starting my experiment with logic-less templating systems. To be honest i expected that i will come here to sell my templating language as the best solution of your problems.
 # Logicless templating
@@ -224,6 +230,13 @@
 	  <h1>{{ title }}</h1>
 	  <p>directed by {{ director }}</p>
 	{{/#movie}}
+
+!SLIDE full
+# Shaven
+
+<footer>
+  <h2><small>http://github.com/nu7hatch/shaven</small></h2>
+</footer>
 
 !SLIDE small with-title
 # Shaven
@@ -272,15 +285,16 @@
 	  Sorry bro, no movies to show here...
 	</div>
 
-!SLIDE
+!SLIDE full
 .notes As i said, 2 months ago i expected to present Shaven as the best solution. But as you see in that presentation, problem is not laying down in the templates but in the way of how our application is built.
 # The winner is...
-<h2><span class="woot">foo</span></h2>
 
-!SLIDE
+!SLIDE full
 # The winner is...
 
-## Just pick up your favorite!
+<footer>
+  <h2>Just pick up your favorite!</h2>
+</footer>
 
 !SLIDE with-title bullets incremental
 # Once again
@@ -300,7 +314,7 @@
 * Avoid magic
 * Use logicless templates
 
-!SLIDE
+!SLIDE full
 # And remember...
 
 !SLIDE small main full wrong

@@ -81,12 +81,14 @@
 !SLIDE main small full wrong
 # Controller !== Event handler
 
-!SLIDE
+!SLIDE full
 .notes Ok, but let's turn off "Hater mode" for a while, and figure out how to make the world better by looking some alternatives... 
 # Alternatives?
 
-!SLIDE
+!SLIDE full
 .notes The only thing coming to my mind is MVP.
 # MVP
 
-## <code>Model - View - Presenter</code>
+<footer>
+  <h2>Model - View - Presenter</h2>
+</footer>

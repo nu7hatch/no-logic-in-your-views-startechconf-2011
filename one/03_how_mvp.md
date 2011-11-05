@@ -10,7 +10,7 @@
 * View 
     - only presentation layer, no access to model
 
-!SLIDE
+!SLIDE full
 .notes Ok my friends, for sure you want to see it in action, so I prepared some snippets whith possible implementation.
 # Example...
 
@@ -98,8 +98,8 @@
 !SLIDE main good full
 # MVCPHT?
 
-!SLIDE
+!SLIDE full
 # AAAAAAA
 
-!SLIDE small
+!SLIDE small full
 # American Association Against Acronym and Abbreviation Abuse

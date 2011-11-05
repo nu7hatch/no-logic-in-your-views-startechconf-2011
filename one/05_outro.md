@@ -27,6 +27,3 @@
 <footer>
   <h2>http://www.github.com/schacon/showoff</h2>
 </footer>
-
-!SLIDE full
-# Questions?

@@ -18,48 +18,57 @@
 .notes What I have here is very, very simple user model, just name and age. 
 # Model
 
-    @@@python
-	class User(object):
-	    def __init__(self, name, age):
-	        self.name = name
-		    self.age = age
-
+    @@@ruby
+	class User < Struct(:name, :age)
+	  # snip...
+	end
+	
 !SLIDE small with-title
 .notes Also very simple presentrer.
 # Presenter
 
-    @@@python
-	class UserInfoPresenter(object):
-        def __init__(self, **kw):
-            self.__user = User(kw['name'], kw['age'])
-			self.user_name = self.__user.name
-			self.user_age = self.__user.age
-			
+    @@@ruby
+	class UserInfoPresenter
+	  def initialize(attrs={})
+	    @user = User.new(attrs[:name], attrs[:age])
+	  end
+	  
+	  def name
+	    @user.name
+	  end
+	  
+	  def age
+	    @user.age
+	  end
+	end
+
 !SLIDE small with-title
 .notes And finally, one possible view. 
 # View
 
-    @@@python
-	class UserInfoView(object):
-	    def __init__(self, **kw):
-	        self.p = UserInfoPresenter(**kw)
+    @@@ruby
+	class UserInfoView
+	  def initialize(params={})
+	    @p = UserInfoPresenter(params)
+	  end
 	  
-	    def render(self):
-	        return "My name is %s and I'm %d years old" % (
-			    self.p.user_name,
-				self.p.user_age)
+	  def render
+	    "My name is %s and I'm %d years old" % [
+		  @p.name, @p.age ]
+	  end
+	end
 
 !SLIDE small with-title
 .notes Now we can use this views in our application. 
 # Usage?...
 
-    @@@python
-	import tornado.web
+    @@@ruby
+	require 'sinatra'
 	
-	class UserInfoHandler(tornado.web.RequestHandler):
-	    def get(self, name, age):
-		    view = UserInfoView(name=name, age=age)
-			self.write(view.render())
+	get '/user-info' do
+	  view = UserInfoView.new(params[:name], params[:age])
+	  view.render
+	end
 
 !SLIDE with-title bullets incremental
 .notes As you noticed, I totaly separated my application from the web requests layer. Thanks to this my implementation is very clean, and easy to test without slow and complicated integration tests.

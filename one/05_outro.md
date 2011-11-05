@@ -7,14 +7,6 @@
 </footer>
 
 !SLIDE full
-# Resources
-
-<footer>
-  <h2><small>http://startechconf2011.nu7hat.ch</small></h2>
-  <h2><small>http://github.com/nu7hatch/startechconf-2011</small></h2>
-</footer>
-
-!SLIDE full
 # Thanks to Cubox!
 
 <footer>
@@ -26,4 +18,12 @@
 
 <footer>
   <h2>http://www.github.com/schacon/showoff</h2>
+</footer>
+
+!SLIDE full
+# Resources
+
+<footer>
+  <h2><small>http://startechconf2011.nu7hat.ch</small></h2>
+  <h2><small>http://github.com/nu7hatch/startechconf-2011</small></h2>
 </footer>

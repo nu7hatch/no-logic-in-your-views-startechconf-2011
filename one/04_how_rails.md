@@ -187,7 +187,27 @@
 	<p><%= @post.content %></p>
 	<%= render_cell 'comments/listing', :show, 
 	                :commentable => @post %>
-	
+
+!SLIDE small with-title
+# After
+
+    @@@ruby
+	# app/helpers/comments_helper.rb
+	module CommentsHelper
+	  def comments_for(commentable)
+	    render_cell 'comments/listing', :show, 
+		            :commentable => commentable
+	  end
+	end
+
+!SLIDE small with-title
+# After
+
+    @@@html
+	<!-- posts/show.html.erb -->
+	<h1><%= @post.title %></h1>
+	<p><%= @post.content %></p>
+	<%= comments_for(@post) %>
 
 !SLIDE with-title bullets incremental
 .notes Yes, i'm very big hater of HAML and reason of it is very ordinary. Simply, my applications are styled by external design studios or freelancers, and most of them have no idea about existing of those abstract markups.  
@@ -214,7 +234,7 @@
 
     @@@ruby
 	class MoviesPresenter < Mustache
-	  def movies
+	  def movie
 	    @movie ||= {
 		  :title => "Back to the future",
 		  :director => "Steven Spielberg"
@@ -243,7 +263,7 @@
 
     @@@ruby
 	class MoviesPresenter < Shaven::Presenter
-	  def movies
+	  def movie
 	    @movie ||= {
 		  :title => "Back to the future",
 		  :director => "Steven Spielberg"
